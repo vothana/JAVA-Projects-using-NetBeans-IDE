@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rooter" maxHeight="900.0" maxWidth="1400.0" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: rgba(153,112,176,0.5);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Categories.CategoriesController">
+   <children>
+      <AnchorPane fx:id="anchorpane" maxHeight="900.0" maxWidth="1400.0" prefHeight="900.0" prefWidth="1400.0">
+         <children>
+            <HBox prefHeight="431.0" prefWidth="1278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox prefHeight="900.0" prefWidth="879.0" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="251.0" prefWidth="540.0" />
+                        <AnchorPane id="AnchorPane" prefHeight="433.0" prefWidth="540.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="540.0" style="-fx-background-color: #7C8692; -fx-background-radius: 10;">
+                                 <children>
+                                    <Button fx:id="exit" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#exit" prefHeight="22.0" prefWidth="77.0" style="-fx-background-color: pink; -fx-background-radius: 10;" text="Back">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <TextField fx:id="txtname" layoutX="25.0" layoutY="272.0" prefHeight="42.0" prefWidth="260.0" promptText="Category Name" style="-fx-background-color: #B6F9A5;" />
+                              <Button fx:id="btnSubmit" disable="true" layoutX="231.0" layoutY="338.0" mnemonicParsing="false" onAction="#ActionOnCategory" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #B6F9A5;" text="Submit">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TableView fx:id="tableCat" layoutX="340.0" layoutY="52.0" prefHeight="379.0" prefWidth="196.0" stylesheets="@../possystem/table.css" AnchorPane.rightAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="catID" prefWidth="51.0" text="ID" />
+                                  <TableColumn fx:id="catName" prefWidth="144.0" text="Categories Name" />
+                                </columns>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </TableView>
+                              <Label fx:id="labelID" layoutX="26.0" layoutY="240.0" prefHeight="25.0" prefWidth="50.0" text="ID : ">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="80.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/Logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnDelete" disable="true" layoutX="134.0" layoutY="338.0" mnemonicParsing="false" onAction="#deleteCategory" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #A51F30;" text="Delete" textFill="#fffdfd">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnSubmit1" layoutX="289.0" layoutY="272.0" mnemonicParsing="false" onAction="#newCategory" prefHeight="41.0" prefWidth="35.0" style="-fx-background-color: #A51FB0;" text="New" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="8.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <HBox prefHeight="0.0" prefWidth="540.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="900.0" prefWidth="865.0" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

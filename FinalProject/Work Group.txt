@@ -1,0 +1,10 @@
+
+JAVA Final Project Assignment Group " POS System ":
+
+VOTHANA: PRODUCT CRUD System , UX and Other
+TEY: Categories CRUD System , Images, UI
+SARATH: Employee CRUD System 
+REACHANA: 
+SINAL: 
+
+

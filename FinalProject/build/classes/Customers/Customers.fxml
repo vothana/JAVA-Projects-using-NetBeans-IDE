@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="900.0" maxWidth="1400.0" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customers.CustomersController">
+   <children>
+      <BorderPane style="-fx-background-radius: 20; -fx-background-color: rgba(133,234,158,0.15);">
+         <center>
+            <AnchorPane fx:id="anchorpane" prefHeight="373.0" prefWidth="1400.0">
+               <children>
+                  <AnchorPane id="AnchorPane" prefHeight="435.0" prefWidth="1366.0">
+                     <children>
+                        <TextField fx:id="txtId" editable="false" layoutX="506.0" layoutY="69.0" prefHeight="25.0" prefWidth="59.0" />
+                        <Label layoutX="475.0" layoutY="73.0" text="ID :" />
+                        <TextField fx:id="txtName" layoutX="461.0" layoutY="138.0" promptText="Name..." />
+                        <Label layoutX="461.0" layoutY="112.0" text="Customer Name" />
+                        <TextField fx:id="txtPhoneNumber" layoutX="461.0" layoutY="197.0" promptText="012 879 233" />
+                        <Label layoutX="461.0" layoutY="171.0" text="Phone Number" />
+                        <Label layoutX="659.0" layoutY="112.0" text="Gender" />
+                        <TextField fx:id="txtEmail" layoutX="659.0" layoutY="197.0" promptText="...@email.com" />
+                        <Label layoutX="659.0" layoutY="171.0" text="Email" />
+                        <Label layoutX="461.0" layoutY="233.0" text="Address" />
+                        <Button fx:id="btnNew" layoutX="877.0" layoutY="138.0" mnemonicParsing="false" onAction="#newCustomer" prefHeight="25.0" prefWidth="88.0" styleClass="myButton" stylesheets="@../possystem/Style.css" text="New">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnSave" layoutX="877.0" layoutY="179.0" mnemonicParsing="false" onAction="#saveCustomer" prefHeight="25.0" prefWidth="88.0" styleClass="myButton" stylesheets="@../possystem/Style.css" text="Save">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnDelete" disable="true" layoutX="877.0" layoutY="220.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #00FFFF;" text="Delete">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnUpdate" disable="true" layoutX="877.0" layoutY="260.0" mnemonicParsing="false" onAction="#updateCustomers" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #1022e8;" text="Update" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnClose" layoutX="877.0" layoutY="300.0" mnemonicParsing="false" onAction="#closeForm" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #A52A2A;" text="Close" textFill="#08e11e">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ComboBox fx:id="txtGender" layoutX="659.0" layoutY="138.0" prefWidth="150.0" value="Male" />
+                        <TextArea fx:id="txtAddress" layoutX="461.0" layoutY="258.0" prefHeight="82.0" prefWidth="347.0" promptText="Your address..." wrapText="true" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <HBox prefHeight="88.0" prefWidth="1086.0" style="-fx-background-color: #3ADD62;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="88.0" prefWidth="1343.0" text="Customers Management">
+                     <font>
+                        <Font name="AKbalthom Moul 6" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <TableView fx:id="tableView" prefHeight="364.0" prefWidth="1400.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="cusID" prefWidth="40.0" text="ID" />
+                <TableColumn fx:id="cusName" prefWidth="247.99998474121094" text="Customer Name" />
+                  <TableColumn fx:id="cusGender" prefWidth="128.00001525878906" text="Gender" />
+                  <TableColumn fx:id="cusPhoneNumber" prefWidth="248.33334350585938" text="Phone Number" />
+                  <TableColumn fx:id="cusEmail" prefWidth="279.3333740234375" text="Email" />
+                  <TableColumn fx:id="cusAddress" prefWidth="456.66668701171875" text="Address" />
+              </columns>
+            </TableView>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>

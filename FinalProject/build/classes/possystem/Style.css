@@ -1,0 +1,19 @@
+.jfx-combo-box {
+    -fx-background-color:  PINK;
+}
+
+.jfx-combo-box .label {
+    -fx-background-color:  WHITE;
+    -fx-text-fill: RED;
+}
+
+.combo-box > .combo-box-button-container {
+-fx-background: black;
+-fx-background-color: black;
+-fx-text-fill: white;
+}
+
+ .button:hover {
+        -fx-background-color: #383838;
+        -fx-scale-y: 1.1;
+}
